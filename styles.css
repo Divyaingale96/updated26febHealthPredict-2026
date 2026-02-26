@@ -1,0 +1,95 @@
+/* --- CLINICAL INTELLIGENCE THEME (Midnight & Sapphire) --- */
+
+body { 
+    background: radial-gradient(circle at top left, #0f172a 0%, #020617 100%);
+    background-attachment: fixed;
+    color: #f1f5f9; 
+    font-family: 'Inter', sans-serif; 
+    overflow-x: hidden; 
+    cursor: default; 
+}
+
+#spotlight {
+    position: fixed;
+    top: 0; 
+    left: 0;
+    width: 100%; 
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+    background: radial-gradient(600px circle at var(--x) var(--y), rgba(59, 130, 246, 0.12), transparent 80%);
+}
+
+.glass { 
+    background: rgba(255, 255, 255, 0.02); 
+    backdrop-filter: blur(16px); 
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.06); 
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2); 
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); 
+}
+
+.glass:hover {
+    background: rgba(255, 255, 255, 0.04);
+    border-color: rgba(96, 165, 250, 0.4);
+    box-shadow: 0 8px 32px rgba(59, 130, 246, 0.15);
+    transform: translateY(-3px);
+}
+
+.text-gradient { 
+    background: linear-gradient(135deg, #60A5FA 0%, #3B82F6 100%); 
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent; 
+}
+
+.tab-content { 
+    transition: opacity 0.3s ease-in-out; 
+    position: relative; 
+    z-index: 2; 
+}
+
+.hidden { 
+    display: none; 
+}
+
+.nav-link { 
+    position: relative; 
+    padding-bottom: 4px; 
+    color: #94a3b8; 
+    transition: color 0.3s; 
+}
+
+.nav-link::after { 
+    content: ''; 
+    position: absolute; 
+    width: 0; 
+    height: 2px; 
+    bottom: 0; 
+    left: 0; 
+    background-color: #60A5FA; 
+    transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1); 
+}
+
+.nav-link:hover { color: #ffffff; }
+.nav-link:hover::after { width: 100%; }
+.nav-link.active { color: #ffffff; }
+.nav-link.active::after { width: 100%; }
+
+.feature-card { transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+.feature-card:hover { 
+    transform: translateY(-8px); 
+    border-color: rgba(96, 165, 250, 0.5); 
+}
+
+.custom-scroll::-webkit-scrollbar { width: 6px; }
+.custom-scroll::-webkit-scrollbar-track { 
+    background: rgba(255, 255, 255, 0.02); 
+    border-radius: 10px;
+}
+.custom-scroll::-webkit-scrollbar-thumb { 
+    background: rgba(59, 130, 246, 0.3); 
+    border-radius: 10px; 
+}
+.custom-scroll::-webkit-scrollbar-thumb:hover { 
+    background: rgba(59, 130, 246, 0.6); 
+}
